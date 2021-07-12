@@ -1,7 +1,7 @@
 class HelloController < ApplicationController
 
   def index
-    if params ['msg'] != nil then
+    if params['msg'] != nil then
       @title = params['msg']
     else
       @title = 'index'
