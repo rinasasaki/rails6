@@ -5,6 +5,8 @@ class HelloController < ApplicationController
       @title = 'Result'
       if params['s1'] then
         @msg = 'you selected: ' + params['s1']
+        for val in params['s1']
+          @msg += val + ''
       else
         @msg = 'not selected...'
       end
