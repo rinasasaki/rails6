@@ -10,7 +10,7 @@ class HelloController < ApplicationController
       end
     else
       @title = 'Index'
-      @msg = 'Select list...'
+      @msg = 'Select ...'
     end
   end
 end
