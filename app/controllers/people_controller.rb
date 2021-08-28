@@ -1,18 +1,16 @@
 class PeopleController < ApplicationController
 
-
   def index
     @msg = 'Person data.'
     @data = Person.all
   end
 
   def show
-    @msg = "Indexed data."
-    @data = Person.find(params[:id])
+    @msg = 'Indexed data.'
+    @data = Person.find(params[id])
   end  
 
 # 以下は、既にあるメソッドを修正する
-
 
 def add
   @msg = "add new data."
@@ -29,6 +27,7 @@ end
 
 
 # 以下は新たに追加するメソッド
+
 def edit
   @msg = "edit data.[id = " + params[:id] + "]"
   @person = Person.find(params[:id])
