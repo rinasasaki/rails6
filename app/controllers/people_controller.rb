@@ -15,7 +15,6 @@ class PeopleController < ApplicationController
     @msg = "add new data."
   end
   
-  
   def create
     if request.post? then
       obj = Person.create(
