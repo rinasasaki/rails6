@@ -11,21 +11,27 @@ class PeopleController < ApplicationController
     @data = Person.find(params[:id])
   end  
 
-  def add
-    @msg = "add new data."
-  end
-  
-  def create
-    if request.post? then
-      obj = Person.create(
-        name: params['name'],
-        age:params['age'],
-        mail:params['mail']
-      )
-    end
-    redirect_to '/people'
-  end
-  
+# 以下は、既にあるメソッドを修正する
 
+
+def add
+  @msg = "add new data."
+  @person = Person.new
 end
 
+
+def create
+  if request.post? then
+    Person.create(person_params)
+  end
+  redirect_to '/people'
+end
+
+
+# 以下は新たに追加するメソッド
+
+
+private
+def person_params
+  params.require(:person).permit(:name, :age, :mail)
+end
