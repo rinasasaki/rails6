@@ -1,6 +1,6 @@
 <h1 class="display-4 text-primary">People#add</h1>
 <p><%= @msg %></p>
-<%=form_tag (controller:'people', action:'add') do %>
+<%= form_tag (controller:'people', action:'add') do %>
   <div class="form-group">
     <label for="name">Name</label>
     <%= text_field_tag("name","",{class:"form-control"}) %>
