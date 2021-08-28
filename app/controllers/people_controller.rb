@@ -29,6 +29,18 @@ end
 
 
 # 以下は新たに追加するメソッド
+def edit
+  @msg = "edit data.[id = " + params[:id] + "]"
+  @person = Person.find(params[:id])
+end
+
+
+def update
+  obj = Person.find(params[:id])
+  obj.update(person_params)
+  redirect_to '/people'
+end
+
 
 
 private
