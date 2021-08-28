@@ -39,10 +39,9 @@ class MyData
   attr_accessor :msg
 
 
-  def initialize msg:msg, name:name, mail:mail
+  def initialize msg:message, name:namae, mail:email
     self.name = name
     self.mail = mail
     self.msg = msg
   end
 end
-
