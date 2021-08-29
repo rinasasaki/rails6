@@ -13,7 +13,8 @@ Rails.application.routes.draw do
   get 'people/add'
   post 'people/add', to: 'people#create'
   get 'people/edit/:id', to: 'people#edit'
-  post 'people/edit/:id', to: 'people#update'
   get 'people/:id', to: 'people#show'
+  post 'people/edit/:id', to: 'people#update'
+  patch 'people/edit/:id', to: 'people#update'
 
 end
